@@ -10,7 +10,7 @@ endif()
 
 message(STATUS "Build type ${CMAKE_BUILD_TYPE}")
 
-set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
+# set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
 # -Weffc++
 set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS} -Wall -Wextra -Wshadow -pedantic")
 # create a compile database to be used by YCM

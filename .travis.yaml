@@ -1,0 +1,9 @@
+language: cpp
+compiler:
+  - clang
+  - gcc
+script:
+    # cmake -GNinja
+    mkdir build && cd build
+    cmake ..
+    cmake --build . --target test
