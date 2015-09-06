@@ -4,8 +4,7 @@ compiler:
   - gcc
 script:
     # cmake -GNinja
-    mkdir build && cd build
-    cmake ..
+    cmake
     cmake --build . --target test
 branches:
   only:
