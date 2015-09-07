@@ -1,4 +1,4 @@
-https://travis-ci.org/domidimi/topsort.svg?branch=master
+[![Build Status](https://travis-ci.org/domidimi/topsort.svg?branch=master)](https://travis-ci.org/domidimi/topsort)
 
 # Simple implementation of a Topological sort in C++11
 
