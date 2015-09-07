@@ -1,5 +1,10 @@
 [![Build Status](https://travis-ci.org/domidimi/topsort.svg?branch=master)](https://travis-ci.org/domidimi/topsort)
 
+<a href="https://scan.coverity.com/projects/topsort">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/6289/badge.svg"/>
+</a>
+
 # Simple implementation of a Topological sort in C++11
 
 This is just a simple test project.
