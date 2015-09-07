@@ -5,6 +5,7 @@
 #include <list>
 #include <vector>
 #include <set>
+#include <stdexcept>
 
 // TODO allow usage of vectors instead of a map if the ids of the vertices are
 // numbers
