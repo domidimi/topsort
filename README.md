@@ -1,3 +1,5 @@
+https://travis-ci.org/domidimi/topsort.svg?branch=master
+
 # Simple implementation of a Topological sort in C++11
 
 This is just a simple test project.
