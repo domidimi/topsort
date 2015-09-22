@@ -1,16 +1,31 @@
 language: cpp
+env:
+   -GCC_VER="5.1"
+install:
+    - if [ "$CXX" = "g++" ]; then export CXX="g++-$GCC_VER" CC="gcc-$GCC_VER"; fi
+    - export PATH=/usr/local/bin:/usr/bin:${PATH}
+    - echo ${CXX}
+    - ${CXX} --version
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-$GCC_VER
+    - g++-$GCC_VER
+    - clang
+    - valgrind
 compiler:
-  - clang
-  - gcc
+    - clang
+    - gcc
 before_script:
-  - mkdir build
-  - cd build
-  - cmake ..
-  # cmake -GNinja
+    - mkdir build && cd build
+    - cmake ..
+    # cmake -GNinja ..
 script:
-  - cmake --build .
-  - cmake --build . --target test
-  - cd .. && rm -rf build
+    - cmake --build .
+    - cmake --build . --target test
+    - cd .. && rm -rf build
 branches:
-  only:
-    - master
+    only:
+        - master
