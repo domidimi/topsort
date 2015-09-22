@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/domidimi/topsort.svg?branch=master)](https://travis-ci.org/domidimi/topsort)
 
-<a href="https://scan.coverity.com/projects/topsort">
+<a href="https://scan.coverity.com/projects/domidimi-topsort">
   <img alt="Coverity Scan Build Status"
-       src="https://scan.coverity.com/projects/6289/badge.svg"/>
+       src="https://img.shields.io/coverity/scan/6430.svg"/>
 </a>
 
 # Simple implementation of a Topological sort in C++11
@@ -17,7 +17,8 @@ is a list of vertices to which there exists a connection.
 ## Examples
 
 ## TODO
-Add Travis configuration file
 Add address sanitizer checks
+
 Add cppcheck
+
 Add Valgrind
