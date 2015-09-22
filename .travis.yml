@@ -1,4 +1,9 @@
 language: cpp
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "jEunrdSVaET0y2HtsunqNfRp0nX0F67ifm+6oVMqFM0dvdw8zbeoyLtFqAvO0GJ+zNtdAP3CMipXxz/2gMkV5ep9HP7LAbnfmFzQ8PrWfolfJuvEWksOMfgimjO/RLLYKA6BMY617mVxnQ7iyQCdGEFNd7WiOKIO5T+C832vDVrSktVS2512th4w24Vk9pZNkIj0rM71BLwNfBHTjTBVO9r9jyKHYpaRCc1MjyLDDCplDze5DycZmsAZoDmsK93c9GFKGI5LtALj2BcvdWkjDRIpr0YxwJLQFF/7aH9UHn/Nrq6ptOCPjJDt0++JMFUCpypNvTmxDf3iWprOwJs2Ld6MO8tWWVPtdtE5Y0IAsStpSNN32Z1CSsLgDQMXdZSgr2h1TFBRGQ7Fc5P7Vdy4gasjTKW7XbxJNzV7Q+mZm8bVez2JINR+snRQ6n6l96Wae9c2uACxjSBTCO2uQZOR6oThtpZ2U9oXMXoBxbmrx56zof3NyWlm/lczXVuyvCCQbaqriqf1pw1NWmo22njrfBz2XZJjcyOa42lXQlzI6OqjdP6R0K65FoNkcgequOiOt9jIiuNNYi4JwlP7n3XYs7eK9NTA+mn0j+u2BlfmOrgZ1gTUS1xvotBO0yAc70AloygTFD6PGsIKLuPUrublJV2/Ky5HuLYZ6AdV7Bxy9ZA="
 install:
     - if [ "$CXX" = "g++" ]; then export CXX="g++-4.9" CC="gcc-4.9"; fi
     - export PATH=/usr/local/bin:/usr/bin:${PATH}
@@ -12,6 +17,13 @@ addons:
     - gcc-4.9
     - g++-4.9
     - valgrind
+  coverity_scan:
+    project:
+      name: "domidimi/topsort"
+      description: "Build submitted via Travis CI"
+    build_command_prepend: "mkdir build && cd build && cmake .."
+    build_command:   "cmake --build ."
+    branch_pattern: coverity_scan
 compiler:
     - clang
     - gcc
