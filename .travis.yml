@@ -1,6 +1,6 @@
 language: cpp
 install:
-    - if [ "$CXX" = "g++" ]; then export CXX="g++-5.1" CC="gcc-5.1"; fi
+    - if [ "$CXX" = "g++" ]; then export CXX="g++-4.9" CC="gcc-4.9"; fi
     - export PATH=/usr/local/bin:/usr/bin:${PATH}
     - echo ${CXX}
     - ${CXX} --version
@@ -9,8 +9,8 @@ addons:
     sources:
     - ubuntu-toolchain-r-test
     packages:
-    - gcc-5.1
-    - g++-5.1
+    - gcc-4.9
+    - g++-4.9
     - valgrind
 compiler:
     - clang
